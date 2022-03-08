@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title><%= title %></title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+</head>
+<body style="background-color: #E7EEF0;">
+    <div class="container mt-3" style="width: 400px;">
+        <div class="media">
+         Thank you for submitting the course evaluation!
+        </div>
+
+		 <form action="/comment_student" method="POST">        
+      
+        <p>Feedback by <%=student.email %>
+        (total number of feedback: <%= comments.length %>)
+        </p>
+       
+		        <table class="table table-striped mt-3">
+            <thead class="thead-dark">
+              <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Comment</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% comments.forEach(function(comment){ %>
+              <tr>
+                <td><%=comment.courseCode%></td>
+                <td><%=comment.courseName%></td>
+                <td><%=comment.comment%></td>
+              </tr>
+              <% })%>
+            </tbody>
+          </table>
+        <br>   
+        <a href="http://localhost:3000/">Main Page</a>
+		    <button type="submit" class="btn btn-info" style="font-weight: bold; width:100%;">Log Out</button
+		</form>
+    </div>
+    
+	<div class="container">
+	</div>
+</body>
+</html>

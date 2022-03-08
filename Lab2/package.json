@@ -1,0 +1,26 @@
+{
+  "name": "WahidaHossain_COMP308Lab2",
+  "version": "0.0.0",
+  "description": "WahidaHossain_COMP308Lab2",
+  "main": "server.js",
+  "author": "",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "method-override": "^2.3.10",
+    "mongoose": "^5.8.11",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "keywords": [],
+  "license": "ISC"
+}
